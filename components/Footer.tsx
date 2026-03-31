@@ -60,11 +60,18 @@ export default function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.3em] font-black text-primary mb-10 italic">Quick Explore</h4>
             <ul className="space-y-5">
-              {["Home", "About Us", "Our Products", "R & D Center", "Gallery", "Contact Us"].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="group flex items-center gap-3 text-stone-400 hover:text-white transition-all text-sm font-bold">
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about" },
+                { name: "Our Products", href: "/products" },
+                { name: "Our Work", href: "/our-work" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact Us", href: "/contact" }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="group flex items-center gap-3 text-stone-400 hover:text-white transition-all text-sm font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-stone-800 group-hover:bg-primary group-hover:scale-150 transition-all" />
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}

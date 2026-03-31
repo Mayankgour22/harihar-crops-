@@ -12,12 +12,13 @@ const navItems = [
     name: "Products", 
     href: "#", 
     dropdown: [
-      { name: "Biostimulants", href: "/products/biostimulants" },
-      { name: "Pesticides", href: "/products/pesticides" },
-      { name: "Fertilizers", href: "/products/fertilizers" }
+      { name: "Biostimulants", href: "/products?category=Biostimulants" },
+      { name: "Pesticides", href: "/products?category=Pesticides" },
+      { name: "Fungicides", href: "/products?category=Fungicides" },
+      { name: "Fertilizers", href: "/products?category=Soluble Fertilizers" }
     ] 
   },
-  { name: "R & D", href: "/research" },
+  { name: "Our Work", href: "/our-work" },
   { name: "Career", href: "/career" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
@@ -64,7 +65,6 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
                 <div 
@@ -73,16 +73,28 @@ export default function Navbar() {
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <Link 
-                    href={item.href}
-                    className={`text-sm font-bold flex items-center gap-1 transition-all duration-300 relative group truncate ${
-                      scrolled ? "text-stone-700 dark:text-stone-300" : "text-white/90"
-                    } hover:text-primary dark:hover:text-primary`}
-                  >
-                    {item.name}
-                    {item.dropdown && <ChevronDown className={`w-3 h-3 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""}`} />}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                  </Link>
+                  {item.dropdown ? (
+                    <button 
+                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                      className={`text-sm font-bold flex items-center gap-1 transition-all duration-300 relative group truncate ${
+                        scrolled ? "text-stone-700 dark:text-stone-300" : "text-white/90"
+                      } hover:text-primary dark:hover:text-primary animate-none border-none bg-transparent p-0`}
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-3 h-3 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""}`} />
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                    </button>
+                  ) : (
+                    <Link 
+                      href={item.href}
+                      className={`text-sm font-bold flex items-center gap-1 transition-all duration-300 relative group truncate ${
+                        scrolled ? "text-stone-700 dark:text-stone-300" : "text-white/90"
+                      } hover:text-primary dark:hover:text-primary`}
+                    >
+                      {item.name}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                    </Link>
+                  )}
                   
                   {item.dropdown && (
                     <AnimatePresence>
@@ -98,6 +110,7 @@ export default function Navbar() {
                             <Link
                               key={sub.name}
                               href={sub.href}
+                              onClick={() => setActiveDropdown(null)}
                               className="flex items-center justify-between px-4 py-3 text-sm font-medium text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-primary rounded-xl transition-all group"
                             >
                               {sub.name}

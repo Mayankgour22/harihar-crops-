@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import CategoryGrid from "@/components/CategoryGrid";
+import OurWorkSection from "@/components/OurWorkSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default function Home() {
                   {/* Floating Stat Card inside Image */}
                   <div className="absolute bottom-10 left-10 right-10 bg-white/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                     <p className="text-4xl font-black mb-1">15+</p>
-                    <p className="text-sm font-bold uppercase tracking-widest text-white/80">Years of R&D Excellence</p>
+                    <p className="text-sm font-bold uppercase tracking-widest text-white/80">Years of Work Excellence</p>
                   </div>
                 </div>
                 
@@ -97,6 +98,7 @@ export default function Home() {
           </div>
         </section>
 
+        <OurWorkSection />
         <CategoryGrid />
 
         {/* Global Impact CTA - Redesigned */}
