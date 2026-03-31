@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Leaf, Mail, Phone, MapPin, Share2, Globe, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Share2, Globe, ArrowRight } from "lucide-react";
 
 // Custom SVG Icons for missing Lucide brand icons
 const Instagram = ({ className }: { className?: string }) => (
@@ -40,16 +41,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-10 group">
-              <div className="bg-primary p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Leaf className="text-white w-7 h-7" />
+              <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-2xl group-hover:rotate-12 transition-transform duration-300">
+                <Image 
+                  src="/logo.jpeg" 
+                  alt="Harihar Crop Science Logo" 
+                  width={56} 
+                  height={56} 
+                  className="object-cover w-full h-full"
+                />
               </div>
-              <span className="text-3xl font-black tracking-tighter">HARIHAR<span className="text-secondary italic font-serif">CROPS</span></span>
+              <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap">HARIHAR<span className="text-secondary ml-2 italic font-serif">CROP SCIENCE</span></span>
             </Link>
             <p className="text-stone-400 leading-relaxed mb-10 text-lg font-medium opacity-80">
               Pioneering the next wave of agricultural innovation in India. Sustainability, science, and success for every farmer.
             </p>
             <div className="flex items-center gap-4">
-              {[Instagram, Twitter, Linkedin, Facebook].map((Icon, i) => (
+              <a href="https://instagram.com/hariharcropscience" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-primary hover:text-white rounded-2xl flex items-center justify-center transition-all duration-300 border border-white/5">
+                <Instagram className="w-5 h-5" />
+              </a>
+              {[Twitter, Linkedin, Facebook].map((Icon, i) => (
                 <a key={i} href="#" className="w-12 h-12 bg-white/5 hover:bg-primary hover:text-white rounded-2xl flex items-center justify-center transition-all duration-300 border border-white/5">
                   <Icon className="w-5 h-5" />
                 </a>
@@ -106,7 +116,7 @@ export default function Footer() {
                 <div className="w-12 h-12 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><Phone className="w-6 h-6" /></div>
                 <div>
                   <p className="text-stone-300 text-sm font-bold mb-1">Expert Helpline</p>
-                  <p className="text-stone-500 text-xs font-medium">+91-XXXXXXXXXX</p>
+                  <p className="text-stone-500 text-xs font-medium">+91-963071205</p>
                 </div>
               </li>
               <li className="flex gap-4 group">
@@ -122,7 +132,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-600">
-            &copy; {new Date().getFullYear()} Harihar Crops Science Pvt Ltd.
+            &copy; {new Date().getFullYear()} Harihar Crop Science Pvt Ltd.
           </p>
           <div className="flex gap-10">
             <Link href="#" className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-600 hover:text-primary transition-colors italic line-through decoration-secondary/40 decoration-2">Privacy Policy</Link>

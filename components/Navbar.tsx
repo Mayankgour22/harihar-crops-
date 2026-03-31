@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Leaf, ChevronDown, Phone, Globe, Search } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -55,13 +56,19 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 group">
               <div className="relative">
-                <div className="bg-primary p-2.5 rounded-xl shadow-[0_0_20px_rgba(21,128,61,0.3)] group-hover:rotate-12 transition-transform duration-300">
-                  <Leaf className="text-white w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl overflow-hidden shadow-[0_0_20px_rgba(21,128,61,0.3)] group-hover:rotate-12 transition-transform duration-300">
+                  <Image 
+                    src="/logo.jpeg" 
+                    alt="Harihar Crop Science Logo" 
+                    width={48} 
+                    height={48} 
+                    className="object-cover w-full h-full"
+                  />
                 </div>
                 <div className="absolute -inset-1 bg-primary/20 blur-lg rounded-full -z-10 group-hover:opacity-100 opacity-0 transition-opacity" />
               </div>
               <span className={`text-2xl font-black tracking-tighter flex items-center ${scrolled ? "text-stone-900 dark:text-white" : "text-white"}`}>
-                HARIHAR<span className="text-secondary ml-1 font-serif italic">CROPS</span>
+                HARIHAR<span className="text-secondary ml-1 font-serif italic">CROP SCIENCE</span>
               </span>
             </Link>
 
@@ -130,13 +137,13 @@ export default function Navbar() {
               <button className="p-2 text-stone-400 hover:text-primary transition-colors">
                 <Search className="w-5 h-5" />
               </button>
-              <button className="relative group px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-xl transition-all overflow-hidden shadow-lg shadow-primary/20 active:scale-95">
+              <a href="tel:+91963071205" className="relative group px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-xl transition-all overflow-hidden shadow-lg shadow-primary/20 active:scale-95">
                 <span className="relative z-10 flex items-center gap-2">
                   Enquire Now
                   <Phone className="w-4 h-4" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button - RE-ENGINEERED */}
@@ -209,9 +216,9 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="mt-8"
               >
-                <button className="w-full py-5 bg-primary text-white text-xl font-black rounded-2xl shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
+                <a href="tel:+91963071205" className="w-full py-5 bg-primary text-white text-xl font-black rounded-2xl shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
                   Enquire Now <Phone className="w-6 h-6" />
-                </button>
+                </a>
                 <div className="flex items-center justify-center gap-6 mt-10">
                    <div className="flex items-center gap-2 text-stone-500 dark:text-stone-400">
                      <Globe className="w-5 h-5" />

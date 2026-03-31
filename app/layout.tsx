@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Harihar Crops - Your Trusted Partner in Modern Agriculture",
-  description: "Explore Harihar Crops' premium biostimulants, pesticides, and fertilizers. Dedicated to empowering farmers with high-quality agricultural solutions and innovation.",
-  keywords: ["Harihar Crops", "biostimulants", "pesticides", "water soluble fertilizers", "crop science", "farming solutions", "Indian agriculture"],
-  authors: [{ name: "Harihar Crops" }],
+  title: "Harihar Crop Science - Your Trusted Partner in Modern Agriculture",
+  description: "Explore Harihar Crop Science's premium biostimulants, pesticides, and fertilizers. Dedicated to empowering farmers with high-quality agricultural solutions and innovation.",
+  keywords: ["Harihar Crop Science", "biostimulants", "pesticides", "water soluble fertilizers", "crop science", "farming solutions", "Indian agriculture"],
+  authors: [{ name: "Harihar Crop Science" }],
   openGraph: {
-    title: "Harihar Crops - Modern Agricultural Solutions",
+    title: "Harihar Crop Science - Modern Agricultural Solutions",
     description: "Empowering farmers with premium crop science products and sustainable farming solutions.",
     url: "https://hariharcrops.com",
-    siteName: "Harihar Crops",
+    siteName: "Harihar Crop Science",
     locale: "en_IN",
     type: "website",
   },

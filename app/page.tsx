@@ -63,7 +63,7 @@ export default function Home() {
                 </h2>
                 
                 <p className="text-xl text-stone-600 dark:text-stone-400 mb-12 leading-relaxed font-medium">
-                  At Harihar Crops, we believe that the soul of India resides in its soil. Our mission is to bridge the gap between traditional wisdom and modern biotechnology, delivering solutions that empower every farmer.
+                  At Harihar Crop Science, founded by <span className="text-stone-900 dark:text-white font-black italic underline decoration-primary/40 underline-offset-8">Mahendra Gurjar</span>, we believe that the soul of India resides in its soil. Our mission is to bridge the gap between traditional wisdom and modern biotechnology, delivering solutions that empower every farmer.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -125,9 +125,9 @@ export default function Home() {
                       <button className="px-12 py-5 bg-primary hover:bg-primary-hover text-white font-black rounded-2xl shadow-2xl shadow-primary/30 active:scale-95 transition-all flex items-center gap-3">
                         Become a Distributor <Sprout className="w-5 h-5" />
                       </button>
-                      <button className="px-12 py-5 bg-white/5 border border-white/10 text-white font-black rounded-2xl hover:bg-white hover:text-stone-900 transition-all active:scale-95">
+                      <a href="tel:+91963071205" className="px-12 py-5 bg-white/5 border border-white/10 text-white font-black rounded-2xl hover:bg-white hover:text-stone-900 transition-all active:scale-95">
                         Talk to Our Experts
-                      </button>
+                      </a>
                   </div>
                 </motion.div>
             </div>

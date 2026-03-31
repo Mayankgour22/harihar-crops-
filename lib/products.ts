@@ -39,7 +39,7 @@ for (let i = 1; i <= 83; i++) {
 }
 
 export const getWhatsAppUrl = (productName: string, productId: string) => {
-    const phoneNumber = "91XXXXXXXXXX"; // Replace with actual number
+    const phoneNumber = "91963071205"; // Real WhatsApp number
     const message = encodeURIComponent(`Hello Harihar Crops! I'm interested in the product: ${productName} (ID: ${productId}). Please provide more details and pricing.`);
     return `https://wa.me/${phoneNumber}?text=${message}`;
 };
