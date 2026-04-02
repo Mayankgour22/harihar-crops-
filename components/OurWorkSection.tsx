@@ -9,27 +9,27 @@ import { Factory, ShoppingCart, Microscope, Truck, ArrowUpRight } from "lucide-r
 const workCategories = [
   {
     id: "manufacturing",
-    title: "Advanced Manufacturing",
-    description: "State-of-the-art facilities producing eco-friendly agricultural solutions with precision and care.",
-    image: "/agri_factory_interior_1774947009707.png",
+    title: "Precision Manufacturing",
+    description: "Operating with cutting-edge technology to formulate high-efficiency crop protection solutions.",
+    image: "/images/factory-photo.png",
     icon: Factory,
     color: "from-emerald-500 to-teal-700",
   },
   {
-    id: "selling",
-    title: "Global Distribution",
-    description: "Reaching millions of farmers across India through a robust network of trusted dealers and sub-dealers.",
-    image: "/agri_selling_point_1774947049551.png",
-    icon: ShoppingCart,
-    color: "from-amber-400 to-orange-600",
-  },
-  {
     id: "bottling",
-    title: "Quality Packaging",
-    description: "Ensuring product integrity from factory floor to farmer's hands with premium, leak-proof packaging.",
-    image: "/agri_medicine_bottles_1774947032205.png",
+    title: "Secure Bottling Line",
+    description: "Automated filling processes ensure zero leakage and precise measurement for every product unit.",
+    image: "/images/bottles-photo.png",
     icon: Microscope,
     color: "from-blue-500 to-indigo-700",
+  },
+  {
+    id: "distribution",
+    title: "Field Connection",
+    description: "Connecting our scientific research directly with the farmer's soil for maximized yield.",
+    image: "/images/field-photo.png",
+    icon: Truck,
+    color: "from-amber-400 to-orange-600",
   },
 ];
 
@@ -72,6 +72,7 @@ export default function OurWorkSection() {
                 src={item.image}
                 alt={item.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent group-hover:via-stone-950/60 transition-all duration-500" />

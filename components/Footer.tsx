@@ -50,7 +50,10 @@ export default function Footer() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <span className="text-3xl font-black tracking-tighter uppercase whitespace-nowrap">HARIHAR<span className="text-secondary ml-2 italic font-serif">CROP SCIENCE</span></span>
+              <div className="flex flex-col leading-none">
+                <span className="text-3xl font-black tracking-tighter uppercase">HARIHAR</span>
+                <span className="text-xs font-serif italic text-secondary tracking-[0.2em] mt-1 uppercase">Crop Science</span>
+              </div>
             </Link>
             <p className="text-stone-400 leading-relaxed mb-10 text-lg font-medium opacity-80">
               Pioneering the next wave of agricultural innovation in India. Sustainability, science, and success for every farmer.
@@ -75,7 +78,6 @@ export default function Footer() {
                 { name: "About Us", href: "/about" },
                 { name: "Our Products", href: "/products" },
                 { name: "Our Work", href: "/our-work" },
-                { name: "Gallery", href: "/gallery" },
                 { name: "Contact Us", href: "/contact" }
               ].map((link) => (
                 <li key={link.name}>
@@ -103,27 +105,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.3em] font-black text-primary mb-10 italic">Global reach</h4>
+            <h4 className="text-xs uppercase tracking-[0.3em] font-black text-primary mb-10 italic">Our Presence</h4>
             <ul className="space-y-8">
               <li className="flex gap-4 group">
                 <div className="w-12 h-12 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><MapPin className="w-6 h-6" /></div>
                 <div>
                   <p className="text-stone-300 text-sm font-bold mb-1">Corporate HQ</p>
-                  <p className="text-stone-500 text-xs leading-relaxed font-medium capitalize">Indore, Madhya Pradesh, India</p>
+                  <p className="text-stone-500 text-xs leading-relaxed font-medium capitalize">Gujarat, India</p>
                 </div>
               </li>
               <li className="flex gap-4 group">
                 <div className="w-12 h-12 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><Phone className="w-6 h-6" /></div>
                 <div>
                   <p className="text-stone-300 text-sm font-bold mb-1">Expert Helpline</p>
-                  <p className="text-stone-500 text-xs font-medium">+91-963071205</p>
+                  <p className="text-stone-500 text-xs font-medium">+91-9630712105</p>
                 </div>
               </li>
               <li className="flex gap-4 group">
                 <div className="w-12 h-12 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><Mail className="w-6 h-6" /></div>
                 <div>
                   <p className="text-stone-300 text-sm font-bold mb-1">Business Inquiries</p>
-                  <p className="text-stone-500 text-xs font-medium">info@hariharcrops.com</p>
+                  <p className="text-stone-500 text-xs font-medium">hariharcropscience@gmail.com</p>
                 </div>
               </li>
             </ul>

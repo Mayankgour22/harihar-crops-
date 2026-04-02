@@ -22,9 +22,7 @@ function ProductsContent() {
 
   // Update category if URL changes
   React.useEffect(() => {
-    if (categoryFromUrl) {
-      setSelectedCategory(categoryFromUrl);
-    }
+    setSelectedCategory(categoryFromUrl || "All");
   }, [categoryFromUrl]);
 
   const filteredProducts = useMemo(() => {

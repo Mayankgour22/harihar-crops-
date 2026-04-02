@@ -8,7 +8,8 @@ import OurWorkSection from "@/components/OurWorkSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import Image from "next/image";
-import { ArrowRight, Leaf, Sprout, ShieldCheck, Zap, Award } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Leaf, Sprout, ShieldCheck, Zap, Award, Play } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -29,20 +30,20 @@ export default function Home() {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-20">
               <div className="lg:w-1/2 relative group">
-                <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border-[12px] border-white dark:border-stone-800 transition-all duration-700 hover:rotate-2 group-hover:scale-[1.02]">
+                <div className="relative z-10 h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border-[12px] border-white dark:border-stone-800 transition-all duration-700 hover:rotate-2 group-hover:scale-[1.02]">
                   <Image 
-                    src="/cat-1.png" 
-                    alt="Agricultural Innovation" 
-                    width={800} 
-                    height={1000}
-                    className="object-cover h-[700px] w-full"
+                    src="/images/factory-photo.png" 
+                    alt="Our Manufacturing Process" 
+                    fill 
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   
                   {/* Floating Stat Card inside Image */}
                   <div className="absolute bottom-10 left-10 right-10 bg-white/20 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <p className="text-4xl font-black mb-1">15+</p>
-                    <p className="text-sm font-bold uppercase tracking-widest text-white/80">Years of Work Excellence</p>
+                    <p className="text-4xl font-black mb-1">Quality</p>
+                    <p className="text-sm font-bold uppercase tracking-widest text-white/80">Tested in Gujarat R&D Lab</p>
                   </div>
                 </div>
                 
@@ -58,8 +59,8 @@ export default function Home() {
                 </div>
                 
                 <h2 className="text-5xl md:text-6xl font-black text-stone-900 dark:text-white mb-10 leading-[0.95] tracking-tighter">
-                  Nurturing <span className="text-primary italic font-serif">Prosperity</span> <br /> 
-                  through Science.
+                  विज्ञान और <span className="text-primary italic font-serif">भरोसे</span> का <br /> 
+                  मजबूत संगम।
                 </h2>
                 
                 <p className="text-xl text-stone-600 dark:text-stone-400 mb-12 leading-relaxed font-medium">
@@ -87,12 +88,12 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <button className="px-10 py-5 bg-stone-900 dark:bg-white text-white dark:text-stone-900 font-black rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-4 group italic">
+                <Link href="/about" className="px-10 py-5 bg-stone-900 dark:bg-white text-white dark:text-stone-900 font-black rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-4 group italic">
                   Read Our Full Story 
                   <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center group-hover:scale-125 transition-transform">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,6 +101,71 @@ export default function Home() {
 
         <OurWorkSection />
         <CategoryGrid />
+
+        {/* Results Preview Section */}
+        <section className="py-32 bg-stone-50 dark:bg-stone-950 overflow-hidden relative">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-0" />
+          <div className="container mx-auto px-6 lg:px-8 relative z-10">
+             <div className="text-center mb-20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full mb-6">
+                   <Play className="w-4 h-4 text-red-600" />
+                   <span className="text-xs font-black uppercase tracking-[0.2em] text-stone-600 dark:text-stone-400">Success Stories on YouTube</span>
+                </div>
+                <h2 className="text-5xl md:text-7xl font-black text-stone-900 dark:text-white leading-[0.85] tracking-tighter">
+                   Field <span className="text-primary italic font-serif">Transformations.</span>
+                </h2>
+             </div>
+
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <motion.div 
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="group relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl"
+                >
+                   <Image src="/images/result-1.png" alt="Success Story" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                   <div className="absolute bottom-10 left-10 right-10">
+                      <p className="text-sm font-black uppercase tracking-[0.3em] text-primary mb-4 italic">Case Study #01</p>
+                      <h3 className="text-3xl font-black text-white mb-6 leading-tight italic">"Complete recovery of the crop within 15 days."</h3>
+                      <Link href="/results" className="inline-flex items-center gap-3 text-white font-bold hover:text-primary transition-colors group/link">
+                         View Details <ArrowRight className="w-5 h-5 group-hover/link:translate-x-2 transition-transform" />
+                      </Link>
+                   </div>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col justify-center"
+                >
+                   <div className="space-y-12">
+                      <div className="p-8 rounded-[2.5rem] bg-white dark:bg-stone-900 border border-stone-100 dark:border-stone-800 shadow-xl hover:border-primary/20 transition-all">
+                         <div className="flex gap-6 items-center mb-6">
+                            <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary font-black italic">S</div>
+                            <p className="font-black text-xl italic tracking-tight text-stone-900 dark:text-white">Suresh Patel, Mehsana</p>
+                         </div>
+                         <p className="text-stone-500 font-medium italic relative">
+                            <span className="text-6xl text-primary/10 absolute -top-8 -left-2 font-serif">"</span>
+                            Best harvest in 5 years! The team analyzed my soil and recommended exactly what my field needed.
+                         </p>
+                      </div>
+
+                      <div className="text-center md:text-left">
+                         <Link href="/results" className="px-12 py-5 bg-stone-900 dark:bg-white text-white dark:text-stone-900 font-black rounded-2xl shadow-2xl flex items-center gap-4 justify-center md:justify-start w-full md:w-fit group active:scale-95 transition-all italic">
+                            See All Case Stories
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                         </Link>
+                         <p className="mt-8 text-stone-400 font-medium italic">
+                            Watch our documented field visits on <span className="text-red-500 font-bold border-b border-red-500/30">YouTube</span> for authentic proof.
+                         </p>
+                      </div>
+                   </div>
+                </motion.div>
+             </div>
+          </div>
+        </section>
 
         {/* Global Impact CTA - Redesigned */}
         <section className="py-32 relative overflow-hidden">

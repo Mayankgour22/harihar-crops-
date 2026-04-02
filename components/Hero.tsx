@@ -33,31 +33,31 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 shadow-2xl"
           >
             <span className="w-2 h-2 rounded-full bg-secondary animate-ping" />
-            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white">Innovation in Every Harvest</span>
+            <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] text-white italic">"किसान का भरोसा - हरिहर"</span>
           </motion.div>
           
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tighter"
+            className="text-4xl md:text-8xl font-black text-white mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter"
           >
-            Cultivating a <br />
+            किसान की उन्नति, <br />
             <span className="relative inline-block mt-2">
-               <span className="relative z-10 text-primary italic font-serif">Greener</span>
+               <span className="relative z-10 text-primary italic font-serif">देश की प्रगति.</span>
                <svg className="absolute -bottom-2 left-0 w-full h-3 text-secondary/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="4" />
                </svg>
-            </span> FUTURE.
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-2xl text-stone-200 mb-12 max-w-2xl mx-auto font-medium leading-relaxed"
+            className="text-lg md:text-2xl text-stone-200 mb-12 max-w-3xl mx-auto font-medium leading-relaxed"
           >
-             Empowering Indian farmers with world-class <span className="text-white font-bold border-b-2 border-primary">Agri-Science</span> solutions and sustainable crop protection.
+             भारतीय किसानों के अटूट भरोसे और विश्व-स्तरीय <span className="text-white font-bold border-b-2 border-primary italic">Agri-Science</span> के साथ, हरिहर क्रॉप साइंस लेकर आया है शुद्ध और उच्च गुणवत्ता वाली दवाएं।
           </motion.p>
 
           <motion.div

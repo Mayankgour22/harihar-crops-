@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Phone, MessageCircle, MessageSquareText } from "lucide-react";
+import { Phone, MessageCircle, MessageSquareText, Leaf } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function FloatingActions() {
@@ -38,6 +39,22 @@ export default function FloatingActions() {
         </span>
         <div className="absolute -inset-1 bg-primary/20 blur-xl rounded-2xl -z-10 group-hover:opacity-100 opacity-0 transition-opacity" />
       </motion.a>
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.1, translateY: -4 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20, delay: 1.4 }}
+      >
+        <Link
+          href="/products"
+          className="relative w-16 h-16 bg-stone-900 dark:bg-white text-white dark:text-stone-950 flex items-center justify-center rounded-2xl shadow-2xl group overflow-visible"
+        >
+          <Leaf className="w-7 h-7" />
+          <span className="absolute right-20 bg-white dark:bg-stone-900 text-stone-900 dark:text-white px-5 py-3 rounded-2xl font-black shadow-2xl text-xs uppercase tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:right-24 transition-all pointer-events-none border border-stone-100 dark:border-stone-800 italic">
+            Full Catalog
+          </span>
+        </Link>
+      </motion.div>
     </div>
   );
 }

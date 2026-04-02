@@ -13,29 +13,29 @@ export default function OurWorkPage() {
     {
       title: "R&D & Formulation",
       icon: Microscope,
-      description: "Our team of expert scientists works tirelessly to develop eco-friendly and highly effective formulations that address specific crop challenges.",
-      image: "/cat-1.png",
+      description: "Our in-house lab at the Gujarat facility focuses on developing high-stability formulations customized for Western India's unique soil types.",
+      image: "/images/field-photo.png",
       color: "bg-emerald-500",
     },
     {
-      title: "Precision Manufacturing",
+      title: "Advanced Manufacturing",
       icon: Factory,
-      description: "Equipped with state-of-the-art automated machinery, our dedicated facility ensures consistent high-quality production of bio-stimulants and pesticides.",
-      image: "/agri_factory_interior_1774947009707.png",
+      description: "Utilizing modern mixing technology to achieve precise concentration and purity across every batch of crop science solutions.",
+      image: "/images/factory-photo.png",
       color: "bg-teal-600",
     },
     {
-      title: "Quality Monitoring",
+      title: "Automated Bottling",
       icon: ShieldCheck,
-      description: "Every batch undergoes rigorous quality testing in our in-house laboratories to guarantee maximum efficacy before reaching the farmer.",
-      image: "/agri_medicine_bottles_1774947032205.png",
+      description: "Secure, high-precision bottling lines ensure that each unit is filled, sealed, and labeled with absolute consistency.",
+      image: "/images/bottles-photo.png",
       color: "bg-blue-600",
     },
     {
-      title: "Nationwide Distribution",
+      title: "Logistics Excellence",
       icon: Truck,
-      description: "Our logistics network spans across major agricultural hubs, ensuring that our products reach even the remotest corners of the country efficiently.",
-      image: "/agri_selling_point_1774947049551.png",
+      description: "Our regional storage nodes ensure rapid delivery to our dealer network across Gujarat and beyond.",
+      image: "/images/factory-photo.png",
       color: "bg-amber-600",
     },
   ];
@@ -60,8 +60,8 @@ export default function OurWorkPage() {
               <Award className="w-4 h-4 text-primary" />
               <span className="text-xs font-black uppercase tracking-[0.2em] text-primary italic">Our Workflow Excellence</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-stone-900 dark:text-white mb-10 leading-[0.85] tracking-tighter">
-              A Culture of <span className="text-primary italic font-serif">Precision</span><br />
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-stone-900 dark:text-white mb-6 md:mb-10 leading-[1] md:leading-[0.85] tracking-tighter">
+              A Culture of <span className="text-primary italic font-serif">Precision</span><br className="hidden md:block" />
               & <span className="text-secondary italic font-serif">Commitment.</span>
             </h1>
             <p className="text-xl md:text-2xl text-stone-600 dark:text-stone-400 max-w-2xl font-medium leading-relaxed">
@@ -69,33 +69,28 @@ export default function OurWorkPage() {
             </p>
           </motion.div>
           
-          {/* Main Visual Component - Premium Visual */}
+         {/* Main Visual Component - Actual Video Integration */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="mt-20 relative rounded-[3rem] overflow-hidden group shadow-[0_40px_100px_rgba(0,0,0,0.2)] border-[12px] border-white dark:border-stone-900"
           >
-            <div className="aspect-[21/9] relative">
-              <Image 
-                src="/agri_factory_interior_1774947009707.png" 
-                alt="Manufacturing Center" 
-                fill 
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none" />
-              
-              {/* Play Button Overlay - Video Representation */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <button className="w-24 h-24 bg-white/20 backdrop-blur-3xl rounded-full flex items-center justify-center text-white border border-white/30 hover:scale-110 active:scale-95 transition-all duration-300 group/play shadow-2xl">
-                    <Play className="w-8 h-8 fill-white group-hover/play:scale-110" />
-                 </button>
-              </div>
+            <div className="aspect-video md:aspect-[21/9] relative overflow-hidden">
+               <video 
+                 src="/images/factory-video.mp4" 
+                 autoPlay 
+                 muted 
+                 loop 
+                 playsInline
+                 className="absolute inset-0 w-full h-full object-cover"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent pointer-events-none" />
 
               {/* Live Status Label */}
               <div className="absolute top-8 right-8 flex items-center gap-3 bg-red-500 text-white px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-widest animate-pulse shadow-lg">
                 <div className="w-2 h-2 bg-white rounded-full" />
-                Factory Live View
+                Live: Site Operations
               </div>
             </div>
           </motion.div>
@@ -113,7 +108,7 @@ export default function OurWorkPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-24">
                     {processes.map((proc, index) => (
                         <motion.div 
                           key={index}
@@ -123,7 +118,7 @@ export default function OurWorkPage() {
                           className="flex flex-col gap-8 group"
                         >
                             <div className="relative h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-stone-50 dark:border-stone-800">
-                                <Image src={proc.image} alt={proc.title} fill className="object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                <Image src={proc.image} alt={proc.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
                                 <div className="absolute top-6 left-6">
                                     <div className={`${proc.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl rotate-3 translate-y-3 group-hover:rotate-0 group-hover:translate-y-0 transition-all duration-500`}>
                                         <proc.icon className="w-8 h-8" />
@@ -147,9 +142,9 @@ export default function OurWorkPage() {
         <section className="py-24 container mx-auto px-6 relative">
             <div className="flex flex-col lg:flex-row items-center gap-16">
                 <div className="lg:w-1/2">
-                   <h2 className="text-5xl md:text-7xl font-black text-stone-900 dark:text-white mb-10 leading-[0.9] tracking-tighter">
-                      Selling Across <br />
-                      The <span className="text-primary italic font-serif">Heartland.</span>
+                   <h2 className="text-4xl md:text-7xl font-black text-stone-900 dark:text-white mb-6 md:mb-10 leading-[1] md:leading-[0.9] tracking-tighter">
+                      Serving the <br className="hidden md:block" />
+                      Agricultural <span className="text-primary italic font-serif">Heartland.</span>
                    </h2>
                    <div className="space-y-8 mb-12">
                       <div className="flex items-center gap-6 p-6 bg-white dark:bg-stone-900 rounded-[2rem] border border-stone-200 dark:border-white/5 hover:border-primary/50 transition-colors cursor-default group">
@@ -177,7 +172,7 @@ export default function OurWorkPage() {
                 </div>
                 <div className="lg:w-1/2 relative bg-stone-200 dark:bg-stone-800 rounded-[3rem] p-10">
                    <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white dark:border-stone-900 aspect-square">
-                      <Image src="/agri_selling_point_1774947049551.png" alt="Distribution Channel" fill className="object-cover" />
+                      <Image src="/images/field-photo.png" alt="Field Distribution" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                    </div>
                    {/* Floating Counter Card */}
                    <div className="absolute -bottom-10 -left-10 bg-primary p-8 rounded-[2rem] text-white shadow-2xl z-20">
@@ -191,8 +186,8 @@ export default function OurWorkPage() {
         {/* Global Impact CTA - Redesigned */}
         <section className="mt-32 py-32 relative overflow-hidden bg-stone-950 rounded-[4rem] mx-4 md:mx-10 text-center">
             <div className="container mx-auto px-6 relative z-10">
-                  <h2 className="text-5xl md:text-7xl font-black text-white mb-10 leading-[0.9] tracking-tighter">
-                    Ready to <span className="text-primary italic font-serif">Cultivate</span> <br />
+                  <h2 className="text-4xl md:text-7xl font-black text-white mb-6 md:mb-10 leading-[1] md:leading-[0.9] tracking-tighter">
+                    Ready to <span className="text-primary italic font-serif">Cultivate</span> <br className="hidden md:block" />
                     Greatness?
                   </h2>
                   <p className="text-xl text-stone-400 mb-12 max-w-2xl mx-auto font-medium">

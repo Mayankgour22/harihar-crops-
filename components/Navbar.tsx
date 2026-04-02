@@ -11,7 +11,7 @@ const navItems = [
   { name: "About Us", href: "/about" },
   { 
     name: "Products", 
-    href: "#", 
+    href: "/products", 
     dropdown: [
       { name: "Biostimulants", href: "/products?category=Biostimulants" },
       { name: "Pesticides", href: "/products?category=Pesticides" },
@@ -20,8 +20,7 @@ const navItems = [
     ] 
   },
   { name: "Our Work", href: "/our-work" },
-  { name: "Career", href: "/career" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Results", href: "/results" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -67,9 +66,10 @@ export default function Navbar() {
                 </div>
                 <div className="absolute -inset-1 bg-primary/20 blur-lg rounded-full -z-10 group-hover:opacity-100 opacity-0 transition-opacity" />
               </div>
-              <span className={`text-2xl font-black tracking-tighter flex items-center ${scrolled ? "text-stone-900 dark:text-white" : "text-white"}`}>
-                HARIHAR<span className="text-secondary ml-1 font-serif italic">CROP SCIENCE</span>
-              </span>
+              <div className={`flex flex-col leading-none ${scrolled ? "text-stone-900 dark:text-white" : "text-white"}`}>
+                <span className="text-2xl md:text-3xl font-black tracking-tighter">HARIHAR</span>
+                <span className="text-[8px] md:text-[10px] font-serif italic text-secondary tracking-[0.15em] mt-0.5 uppercase">Crop Science</span>
+              </div>
             </Link>
 
             <div className="hidden lg:flex items-center gap-1">
@@ -81,8 +81,8 @@ export default function Navbar() {
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   {item.dropdown ? (
-                    <button 
-                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    <Link 
+                      href={item.href}
                       className={`text-sm font-bold flex items-center gap-1 transition-all duration-300 relative group truncate ${
                         scrolled ? "text-stone-700 dark:text-stone-300" : "text-white/90"
                       } hover:text-primary dark:hover:text-primary animate-none border-none bg-transparent p-0`}
@@ -90,7 +90,7 @@ export default function Navbar() {
                       {item.name}
                       <ChevronDown className={`w-3 h-3 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""}`} />
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                    </button>
+                    </Link>
                   ) : (
                     <Link 
                       href={item.href}
@@ -184,7 +184,14 @@ export default function Navbar() {
                 >
                   {item.dropdown ? (
                     <div className="py-2">
-                      <p className="text-xs uppercase tracking-widest font-black text-primary mb-3 px-4">{item.name}</p>
+                      <Link 
+                        href={item.href} 
+                        onClick={() => setIsOpen(false)}
+                        className="text-xs uppercase tracking-widest font-black text-primary mb-3 px-4 flex items-center justify-between"
+                      >
+                        {item.name}
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
                       <div className="bg-white dark:bg-stone-900 rounded-2xl border border-stone-100 dark:border-stone-800 p-2 shadow-sm">
                         {item.dropdown.map((sub) => (
                           <Link
