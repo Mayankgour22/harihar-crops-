@@ -118,7 +118,7 @@ export default function Footer() {
                 <div className="w-12 h-12 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><Phone className="w-6 h-6" /></div>
                 <div>
                   <p className="text-stone-300 text-sm font-bold mb-1">Expert Helpline</p>
-                  <p className="text-stone-500 text-xs font-medium">7773031120</p>
+                  <p className="text-stone-500 text-xs font-medium">+91 96309 71205</p>
                 </div>
               </li>
               <li className="flex gap-4 group">

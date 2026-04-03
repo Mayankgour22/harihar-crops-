@@ -69,7 +69,7 @@ export default function RootLayout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "7773031120",
+                "telephone": "+91 96309 71205",
                 "contactType": "customer support",
                 "areaServed": "IN",
                 "availableLanguage": ["English", "Hindi"]

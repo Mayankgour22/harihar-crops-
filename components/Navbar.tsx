@@ -137,7 +137,7 @@ export default function Navbar() {
               <button className="p-2 text-stone-400 hover:text-primary transition-colors">
                 <Search className="w-5 h-5" />
               </button>
-              <a href="tel:7773031120" className="relative group px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-xl transition-all overflow-hidden shadow-lg shadow-primary/20 active:scale-95">
+              <a href="tel:+919630971205" className="relative group px-6 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-xl transition-all overflow-hidden shadow-lg shadow-primary/20 active:scale-95">
                 <span className="relative z-10 flex items-center gap-2">
                   Enquire Now
                   <Phone className="w-4 h-4" />
@@ -223,7 +223,7 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="mt-8"
               >
-                <a href="tel:7773031120" className="w-full py-5 bg-primary text-white text-xl font-black rounded-2xl shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
+                <a href="tel:+919630971205" className="w-full py-5 bg-primary text-white text-xl font-black rounded-2xl shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
                   Enquire Now <Phone className="w-6 h-6" />
                 </a>
                 <div className="flex items-center justify-center gap-6 mt-10">

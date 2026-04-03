@@ -196,7 +196,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-10">
                <div className="flex items-center gap-3">
                   <Phone className="w-6 h-6 text-primary" />
-                  <a href="tel:7773031120" className="text-xl font-bold hover:text-primary transition-colors">7773031120</a>
+                  <a href="tel:+919630971205" className="text-xl font-bold hover:text-primary transition-colors">+91 96309 71205</a>
                </div>
                <div className="flex items-center gap-3">
                   <Mail className="w-6 h-6 text-primary" />
