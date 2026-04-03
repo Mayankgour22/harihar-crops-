@@ -9,7 +9,7 @@ export default function FloatingActions() {
   return (
     <div className="fixed right-6 bottom-8 lg:bottom-12 flex flex-col gap-5 z-50">
       <motion.a
-        href="https://wa.me/919630712105"
+        href="https://wa.me/917773031120"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}
@@ -26,7 +26,7 @@ export default function FloatingActions() {
       </motion.a>
 
       <motion.a
-        href="tel:+919630712105"
+        href="tel:7773031120"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1, translateY: -4 }}

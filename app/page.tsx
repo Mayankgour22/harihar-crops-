@@ -192,7 +192,7 @@ export default function Home() {
                       <button className="px-12 py-5 bg-primary hover:bg-primary-hover text-white font-black rounded-2xl shadow-2xl shadow-primary/30 active:scale-95 transition-all flex items-center gap-3">
                         Become a Distributor <Sprout className="w-5 h-5" />
                       </button>
-                      <a href="tel:+91963071205" className="px-12 py-5 bg-white/5 border border-white/10 text-white font-black rounded-2xl hover:bg-white hover:text-stone-900 transition-all active:scale-95">
+                      <a href="tel:7773031120" className="px-12 py-5 bg-white/5 border border-white/10 text-white font-black rounded-2xl hover:bg-white hover:text-stone-900 transition-all active:scale-95">
                         Talk to Our Experts
                       </a>
                   </div>

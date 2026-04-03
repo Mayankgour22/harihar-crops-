@@ -19,8 +19,8 @@ import {
 
 // Support Numbers & Links
 const CONTACT_INFO = {
-  primaryPhone: "+91 9630712105",
-  whatsappLink: "https://wa.me/919630712105?text=Hello%20Harihar%20Crop%20Science%2C%20I%20have%20an%20inquiry.",
+  primaryPhone: "7773031120",
+  whatsappLink: "https://wa.me/917773031120?text=Hello%20Harihar%20Crop%20Science%2C%20I%20have%20an%20inquiry.",
   email: "hariharcropscience@gmail.com",
   location: "Gujarat, India",
   hours: "Mon - Sat: 9:00 AM - 6:00 PM"
