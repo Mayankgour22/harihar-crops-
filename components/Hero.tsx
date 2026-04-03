@@ -36,7 +36,7 @@ export default function Hero() {
             <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] text-white italic">"किसान का भरोसा - हरिहर"</span>
           </motion.div>
           
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -49,7 +49,7 @@ export default function Hero() {
                   <path d="M0 5 Q 25 0, 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="4" />
                </svg>
             </span>
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

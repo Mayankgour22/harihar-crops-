@@ -30,8 +30,11 @@ export default function AboutPage() {
                 <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-stone-900 dark:text-white leading-[1] md:leading-tight mb-6 md:mb-8 tracking-tighter">
                   Empowering <span className="text-secondary italic font-serif">Indian</span> Farmers Since 2015.
                 </h1>
+                <p className="text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-4 max-w-xl">
+                   Based in <span className="font-bold text-primary">Gujarat</span>, <span className="font-bold text-primary italic">Harihar Crop Science</span> is an Indian agriculture company founded by <span className="font-bold text-primary underline decoration-primary/30 underline-offset-8">Mahendra Gurjar</span>. The company specializes in manufacturing high-quality pesticides, fertilizers, and biostimulants for research-driven modern farming solutions.
+                </p>
                 <p className="text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-10 max-w-xl">
-                   Based in <span className="font-bold text-primary">Gujarat</span>, <span className="font-bold text-primary italic">Harihar Crop Science</span> is a private enterprise dedicated to manufacturing high-quality, research-driven agricultural solutions that ensure bumper harvests with minimal environmental impact.
+                   Founder: <span className="font-bold text-primary italic">Mahendra Gurjar</span>
                 </p>
                 <div className="flex flex-wrap gap-4">
                    <div className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm">

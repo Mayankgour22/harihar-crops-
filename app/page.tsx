@@ -21,6 +21,7 @@ export default function Home() {
       <Navbar />
       
       <main className="flex-grow pt-0 relative z-10">
+        <h1 className="sr-only">Harihar Crop Science</h1>
         <Hero />
         
         <Stats />
