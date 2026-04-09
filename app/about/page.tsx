@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-primary/5 -z-10" />
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 </div>
               </motion.div>
             </div>
-            <div className="lg:w-1/2 relative">
+            <div className="w-full lg:w-1/2 relative">
                <motion.div 
                  initial={{ scale: 0.9, opacity: 0 }}
                  animate={{ scale: 1, opacity: 1 }}
@@ -129,7 +129,7 @@ export default function AboutPage() {
       <section className="py-24 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
                <h2 className="text-4xl md:text-6xl font-black text-stone-900 dark:text-white leading-[1] md:leading-tight mb-6 md:mb-8 tracking-tighter">
                   Real Manufacturing, <br className="hidden md:block" />
                   <span className="text-primary italic font-serif">Real Results.</span>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                  ))}
                </ul>
             </div>
-            <div className="lg:w-1/2 flex flex-col sm:grid sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col sm:grid sm:grid-cols-2 gap-4 md:gap-6">
               <motion.div 
                 whileHover={{ scale: 1.02 }}
                 className="relative h-64 md:h-80 rounded-[2rem] overflow-hidden shadow-lg"

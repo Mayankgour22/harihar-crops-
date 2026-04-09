@@ -30,7 +30,7 @@ export default function Home() {
         <section className="py-32 relative overflow-hidden bg-white dark:bg-stone-900">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-20">
-              <div className="lg:w-1/2 relative group">
+              <div className="w-full lg:w-1/2 relative group">
                 <div className="relative z-10 h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.1)] border-[12px] border-white dark:border-stone-800 transition-all duration-700 hover:rotate-2 group-hover:scale-[1.02]">
                   <Image 
                     src="/images/factory-photo.png" 
@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="absolute -top-20 -left-20 w-60 h-60 bg-secondary/15 rounded-full blur-[80px] -z-0" />
               </div>
               
-              <div className="lg:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 dark:bg-primary/20 rounded-full mb-8">
                   <Award className="w-4 h-4 text-primary" />
                   <span className="text-xs font-black uppercase tracking-[0.2em] text-primary">About Our Legacy</span>
