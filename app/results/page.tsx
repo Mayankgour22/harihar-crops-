@@ -17,7 +17,7 @@ const successStories = [
     solution: "Our experts visited the field, identified the specific pest, and recommended a customized dosage of 'Harihar Suraksha' fungicide and biostimulants.",
     result: "Complete recovery of the crop within 15 days. Final yield increased by 25% compared to the previous year.",
     image: "/images/result-1.png",
-    videoUrl: "https://www.youtube.com/@Hariharcropscience"
+    videoUrl: "https://www.youtube.com/@Hariharcropscience-02"
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const successStories = [
     solution: "Soil analysis followed by the application of 'Harihar Growth Booster' and specific soluble fertilizers designed for Gujarat's soil.",
     result: "Healthy, vibrant green crops with significant grain weight improvement. Suresh reported his best harvest in 5 years.",
     image: "/images/result-2.png",
-    videoUrl: "https://www.youtube.com/@Hariharcropscience"
+    videoUrl: "https://www.youtube.com/@Hariharcropscience-02"
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const successStories = [
     solution: "Intelligent application of our advanced pesticide range and training on proper spraying techniques provided by our field officer.",
     result: "Elimination of whitefly within 48 hours. The farmer saved his entire investment and secured a high-market price for the quality produce.",
     image: "/images/result-3.png",
-    videoUrl: "https://www.youtube.com/@Hariharcropscience"
+    videoUrl: "https://www.youtube.com/@Hariharcropscience-02"
   }
 ];
 
@@ -183,7 +183,7 @@ export default function ResultsPage() {
                     We post regular field visit videos, farmer testimonials, and product demonstration guides to help our community grow together.
                  </p>
                  <a 
-                  href="https://www.youtube.com/@Hariharcropscience" 
+                  href="https://www.youtube.com/@Hariharcropscience-02" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-6 px-12 py-6 bg-red-600 hover:bg-red-700 text-white font-black text-xl rounded-3xl shadow-2xl shadow-red-600/40 transition-all active:scale-95 group"
