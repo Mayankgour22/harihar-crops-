@@ -112,77 +112,82 @@ export default function FeaturedProducts() {
       {/* Lightbox / Modal */}
       <AnimatePresence>
         {selectedProduct && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-10 pointer-events-none"
-          >
-            <div
-              className="absolute inset-0 bg-stone-950/80 backdrop-blur-xl pointer-events-auto"
+          <div className="fixed inset-0 z-[9999] overflow-y-auto">
+            {/* Background overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-stone-950/80 backdrop-blur-xl pointer-events-auto"
               onClick={() => setSelectedProduct(null)}
             />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 30 }}
-              className="relative w-full max-w-5xl bg-white dark:bg-stone-900 rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.5)] pointer-events-auto border border-white/10"
-            >
-              <button
-                onClick={() => setSelectedProduct(null)}
-                className="absolute top-4 right-4 md:top-10 md:right-10 z-10 w-12 h-12 bg-stone-100/80 dark:bg-stone-800/80 backdrop-blur-md rounded-full flex items-center justify-center text-stone-500 hover:text-white hover:bg-red-500 transition-all"
+            
+            {/* Modal container to center card */}
+            <div className="flex min-h-full items-center justify-center p-4 md:p-10 text-center pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                className="relative w-full max-w-5xl bg-white dark:bg-stone-900 rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.5)] pointer-events-auto border border-white/10 text-left my-8"
               >
-                <X className="w-6 h-6" />
-              </button>
-              <div className="flex flex-col lg:flex-row">
-                <div className="lg:w-1/2 relative aspect-square lg:aspect-auto h-[300px] sm:h-[400px] lg:h-[700px]">
-                  <Image
-                    src={selectedProduct.image}
-                    alt={selectedProduct.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="lg:w-1/2 p-6 sm:p-10 lg:p-16 flex flex-col justify-center">
-                  <p className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 sm:mb-6 italic">
-                    Product Details
-                  </p>
-                  <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-stone-900 dark:text-white mb-6 sm:mb-8 leading-none tracking-tighter">
-                    {selectedProduct.name}
-                  </h2>
-                  <p className="text-base sm:text-xl text-stone-500 dark:text-stone-400 font-medium mb-8 sm:mb-12 leading-relaxed">
-                    {selectedProduct.description} High-efficiency formula for sustainable farming.
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-                    <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
-                        Category
-                      </p>
-                      <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
-                        {selectedProduct.category}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
-                        Certifications
-                      </p>
-                      <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
-                        ISO 9001:2015
-                      </p>
-                    </div>
+                {/* Close Button inside the card (guarantees clickability) */}
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-12 h-12 bg-stone-100 hover:bg-red-500 dark:bg-stone-800 dark:hover:bg-red-600 rounded-full flex items-center justify-center text-stone-500 hover:text-white dark:text-stone-300 transition-all shadow-md"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                <div className="flex flex-col lg:flex-row">
+                  <div className="lg:w-1/2 relative aspect-square lg:aspect-auto h-[300px] sm:h-[400px] lg:h-[700px]">
+                    <Image
+                      src={selectedProduct.image}
+                      alt={selectedProduct.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <a
-                    href={getWhatsAppUrl(selectedProduct.name, selectedProduct.id)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-4 sm:py-6 bg-primary hover:bg-primary-hover text-white rounded-2xl flex items-center justify-center gap-4 text-base sm:text-xl font-black italic shadow-2xl shadow-primary/30 active:scale-95 transition-all"
-                  >
-                    Order via WhatsApp <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
-                  </a>
+                  <div className="lg:w-1/2 p-6 sm:p-10 lg:p-16 flex flex-col justify-center">
+                    <p className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 sm:mb-6 italic">
+                      Product Details
+                    </p>
+                    <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-stone-900 dark:text-white mb-6 sm:mb-8 leading-none tracking-tighter">
+                      {selectedProduct.name}
+                    </h2>
+                    <p className="text-base sm:text-xl text-stone-500 dark:text-stone-400 font-medium mb-8 sm:mb-12 leading-relaxed">
+                      {selectedProduct.description} High-efficiency formula for sustainable farming.
+                    </p>
+                    <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
+                          Category
+                        </p>
+                        <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
+                          {selectedProduct.category}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
+                          Certifications
+                        </p>
+                        <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
+                          ISO 9001:2015
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={getWhatsAppUrl(selectedProduct.name, selectedProduct.id)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-4 sm:py-6 bg-primary hover:bg-primary-hover text-white rounded-2xl flex items-center justify-center gap-4 text-base sm:text-xl font-black italic shadow-2xl shadow-primary/30 active:scale-95 transition-all"
+                    >
+                      Order via WhatsApp <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </motion.div>
+              </motion.div>
+            </div>
+          </div>
         )}
       </AnimatePresence>
     </section>

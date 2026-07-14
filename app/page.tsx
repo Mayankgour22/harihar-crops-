@@ -126,7 +126,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="group relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl"
                 >
-                   <Image src="/images/result-1.png" alt="Success Story" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                   <Image src="/images/result-1.png" alt="Success Story" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                    <div className="absolute bottom-10 left-10 right-10">
                       <p className="text-sm font-black uppercase tracking-[0.3em] text-primary mb-4 italic">Case Study #01</p>
