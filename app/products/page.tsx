@@ -100,7 +100,7 @@ function ProductsContent() {
                           className="group bg-white dark:bg-stone-900 rounded-[2.5rem] overflow-hidden border border-stone-200 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
                         >
                             <div className="relative aspect-square overflow-hidden bg-stone-100 dark:bg-stone-800">
-                                <Image src={p.image} alt={p.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <Image src={p.image} alt={p.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="absolute bottom-6 left-6 right-6 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                                     <button onClick={() => setSelectedProduct(p)} className="w-full py-4 bg-white/20 backdrop-blur-3xl border border-white/30 text-white rounded-2xl flex items-center justify-center gap-2 text-sm font-black italic hover:bg-white hover:text-stone-950 transition-all">
@@ -126,27 +126,84 @@ function ProductsContent() {
       </main>
 
       <AnimatePresence>
-          {selectedProduct && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-10 pointer-events-none">
-                  <div className="absolute inset-0 bg-stone-950/80 backdrop-blur-xl pointer-events-auto" onClick={() => setSelectedProduct(null)} />
-                  <motion.div initial={{ opacity: 0, scale: 0.9, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 30 }} className="relative w-full max-w-5xl bg-white dark:bg-stone-900 rounded-[3rem] overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.5)] pointer-events-auto border border-white/10">
-                      <button onClick={() => setSelectedProduct(null)} className="absolute top-10 right-10 z-10 w-12 h-12 bg-stone-100 dark:bg-stone-800 rounded-full flex items-center justify-center text-stone-500 hover:text-white hover:bg-red-500 transition-all"><X className="w-6 h-6" /></button>
-                      <div className="flex flex-col lg:flex-row">
-                          <div className="lg:w-1/2 relative aspect-square lg:aspect-auto h-[400px] lg:h-[700px]"><Image src={selectedProduct.image} alt={selectedProduct.name} fill className="object-cover" /></div>
-                          <div className="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
-                              <p className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-6 italic">Product In Detail</p>
-                              <h2 className="text-4xl md:text-6xl font-black text-stone-900 dark:text-white mb-8 leading-none tracking-tighter">{selectedProduct.name}</h2>
-                              <p className="text-xl text-stone-500 dark:text-stone-400 font-medium mb-12 leading-relaxed">{selectedProduct.description} High-efficiency formula for sustainable farming.</p>
-                              <div className="grid grid-cols-2 gap-8 mb-12">
-                                  <div><p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">Category</p><p className="text-lg font-bold text-stone-900 dark:text-white">{selectedProduct.category}</p></div>
-                                  <div><p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">Certifications</p><p className="text-lg font-bold text-stone-900 dark:text-white">ISO 9001:2015</p></div>
-                              </div>
-                              <a href={getWhatsAppUrl(selectedProduct.name, selectedProduct.id)} target="_blank" rel="noopener noreferrer" className="w-full py-6 bg-primary hover:bg-primary-hover text-white rounded-2xl flex items-center justify-center gap-4 text-xl font-black italic shadow-2xl shadow-primary/30 active:scale-95 transition-all">Order via WhatsApp <MessageCircle className="w-6 h-6 fill-current" /></a>
-                          </div>
+        {selectedProduct && (
+          <div className="fixed inset-0 z-[9999] overflow-y-auto">
+            {/* Background overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-stone-950/80 backdrop-blur-xl pointer-events-auto"
+              onClick={() => setSelectedProduct(null)}
+            />
+            {/* Modal container to center card */}
+            <div className="flex min-h-full items-center justify-center p-4 md:p-10 text-center pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                className="relative w-full max-w-5xl bg-white dark:bg-stone-900 rounded-3xl lg:rounded-[3rem] overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.5)] pointer-events-auto border border-white/10 text-left my-8"
+              >
+                {/* Close Button inside the card (guarantees clickability) */}
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-12 h-12 bg-stone-100 hover:bg-red-500 dark:bg-stone-800 dark:hover:bg-red-600 rounded-full flex items-center justify-center text-stone-500 hover:text-white dark:text-stone-300 transition-all shadow-md"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                <div className="flex flex-col lg:flex-row">
+                  <div className="lg:w-1/2 relative aspect-square lg:aspect-auto h-[300px] sm:h-[400px] lg:h-[700px]">
+                    <Image
+                      src={selectedProduct.image}
+                      alt={selectedProduct.name}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="lg:w-1/2 p-6 sm:p-10 lg:p-16 flex flex-col justify-center">
+                    <p className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 sm:mb-6 italic">
+                      Product In Detail
+                    </p>
+                    <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-stone-900 dark:text-white mb-6 sm:mb-8 leading-none tracking-tighter">
+                      {selectedProduct.name}
+                    </h2>
+                    <p className="text-base sm:text-xl text-stone-500 dark:text-stone-400 font-medium mb-8 sm:mb-12 leading-relaxed">
+                      {selectedProduct.description} High-efficiency formula for sustainable farming.
+                    </p>
+                    <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
+                          Category
+                        </p>
+                        <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
+                          {selectedProduct.category}
+                        </p>
                       </div>
-                  </motion.div>
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-stone-400 mb-2">
+                          Certifications
+                        </p>
+                        <p className="text-sm sm:text-lg font-bold text-stone-900 dark:text-white">
+                          ISO 9001:2015
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={getWhatsAppUrl(selectedProduct.name, selectedProduct.id)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-4 sm:py-6 bg-primary hover:bg-primary-hover text-white rounded-2xl flex items-center justify-center gap-4 text-base sm:text-xl font-black italic shadow-2xl shadow-primary/30 active:scale-95 transition-all"
+                    >
+                      Order via WhatsApp <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
+                    </a>
+                  </div>
+                </div>
               </motion.div>
-          )}
+            </div>
+          </div>
+        )}
       </AnimatePresence>
       <Footer />
       <FloatingActions />
