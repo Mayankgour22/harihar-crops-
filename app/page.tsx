@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import CategoryGrid from "@/components/CategoryGrid";
+import FeaturedProducts from "@/components/FeaturedProducts";
 import OurWorkSection from "@/components/OurWorkSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
@@ -100,6 +101,7 @@ export default function Home() {
           </div>
         </section>
 
+        <FeaturedProducts />
         <OurWorkSection />
         <CategoryGrid />
 
