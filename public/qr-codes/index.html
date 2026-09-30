@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harihar Crop Science - Official Product QR Codes Catalogue</title>
+  <style>
+    :root {
+      --primary: #15803d;
+      --primary-dark: #166534;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 30px 20px; line-height: 1.5; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    header { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; text-align: center; border: 1px solid #e2e8f0; }
+    h1 { color: var(--primary); font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    p.subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+    input[type="text"] { padding: 12px 20px; border-radius: 12px; border: 1px solid #cbd5e1; width: 340px; max-width: 100%; font-size: 15px; outline: none; }
+    input[type="text"]:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(21,128,61,0.15); }
+    .badge-count { background: #e0f2fe; color: #0284c7; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 14px; }
+    .btn-print { background: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+    .btn-print:hover { background: var(--primary-dark); }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: var(--card-bg); border-radius: 20px; padding: 20px; text-align: center; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-col; flex-direction: column; justify-content: space-between; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; tracking: 1px; color: var(--primary); background: #dcfce7; padding: 4px 10px; border-radius: 8px; margin-bottom: 10px; }
+    .product-id { font-size: 12px; font-weight: 700; color: #94a3b8; }
+    .product-name { font-size: 18px; font-weight: 800; margin: 4px 0 14px 0; color: #0f172a; }
+    .qr-frame { background: #ffffff; padding: 12px; border-radius: 16px; border: 1px solid #f1f5f9; display: inline-block; margin-bottom: 14px; }
+    .qr-frame img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+    .scan-url { font-size: 11px; color: #64748b; word-break: break-all; margin-bottom: 14px; background: #f1f5f9; padding: 6px 10px; border-radius: 8px; text-decoration: none; display: block; }
+    .scan-url:hover { color: var(--primary); }
+    .card-actions { display: flex; gap: 8px; margin-top: auto; }
+    .btn-download { flex: 1; background: #0f172a; color: white; text-decoration: none; padding: 10px; border-radius: 10px; font-size: 13px; font-weight: 700; text-align: center; transition: 0.2s; }
+    .btn-download:hover { background: var(--primary); }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      header, .controls, .card-actions { display: none !important; }
+      .grid { grid-template-columns: repeat(3, 1fr) !important; gap: 15px !important; }
+      .card { page-break-inside: avoid; border: 1px solid #ccc; box-shadow: none !important; padding: 15px !important; }
+      .qr-frame img { width: 140px; height: 140px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌱 Harihar Crop Science - Official Packaging QR Codes</h1>
+      <p class="subtitle">Scan any QR code with a phone camera to immediately open the product's details & dosage page.</p>
+      <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search by product name, ID, or category..." onkeyup="filterCards()">
+        <span class="badge-count" id="countBadge">83 Products</span>
+        <button class="btn-print" onclick="window.print()">🖨️ Print Labels / Catalog</button>
+      </div>
+    </header>
+
+    <div class="grid" id="productsGrid">
+      
+        <div class="card" data-name="vinaash 404" data-id="prod-1" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-1</div>
+            <div class="product-name">VINAASH 404</div>
+            <div class="qr-frame">
+              <img src="prod-01_VINAASH-404.png" alt="VINAASH 404 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-1" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-1</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-01_VINAASH-404.png" download="prod-01_VINAASH-404.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="clothrin 505" data-id="prod-2" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-2</div>
+            <div class="product-name">CLOTHRIN 505</div>
+            <div class="qr-frame">
+              <img src="prod-02_CLOTHRIN-505.png" alt="CLOTHRIN 505 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-2" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-2</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-02_CLOTHRIN-505.png" download="prod-02_CLOTHRIN-505.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har 50" data-id="prod-3" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-3</div>
+            <div class="product-name">HARI HAR 50</div>
+            <div class="qr-frame">
+              <img src="prod-03_HARI-HAR-50.png" alt="HARI HAR 50 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-3" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-3</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-03_HARI-HAR-50.png" download="prod-03_HARI-HAR-50.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har 20" data-id="prod-4" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-4</div>
+            <div class="product-name">HARI HAR 20</div>
+            <div class="qr-frame">
+              <img src="prod-04_HARI-HAR-20.png" alt="HARI HAR 20 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-4" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-4</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-04_HARI-HAR-20.png" download="prod-04_HARI-HAR-20.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="kill-x" data-id="prod-5" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-5</div>
+            <div class="product-name">KILL-X</div>
+            <div class="qr-frame">
+              <img src="prod-05_KILL-X.png" alt="KILL-X QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-5" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-5</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-05_KILL-X.png" download="prod-05_KILL-X.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har 11" data-id="prod-6" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-6</div>
+            <div class="product-name">HARI HAR 11</div>
+            <div class="qr-frame">
+              <img src="prod-06_HARI-HAR-11.png" alt="HARI HAR 11 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-6" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-6</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-06_HARI-HAR-11.png" download="prod-06_HARI-HAR-11.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="s1" data-id="prod-7" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-7</div>
+            <div class="product-name">S1</div>
+            <div class="qr-frame">
+              <img src="prod-07_S1.png" alt="S1 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-7" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-7</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-07_S1.png" download="prod-07_S1.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hunter" data-id="prod-8" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-8</div>
+            <div class="product-name">HUNTER</div>
+            <div class="qr-frame">
+              <img src="prod-08_HUNTER.png" alt="HUNTER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-8" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-8</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-08_HUNTER.png" download="prod-08_HUNTER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="vinaash 50" data-id="prod-9" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-9</div>
+            <div class="product-name">VINAASH 50</div>
+            <div class="qr-frame">
+              <img src="prod-09_VINAASH-50.png" alt="VINAASH 50 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-9" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-9</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-09_VINAASH-50.png" download="prod-09_VINAASH-50.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="sudarshan" data-id="prod-10" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-10</div>
+            <div class="product-name">SUDARSHAN</div>
+            <div class="qr-frame">
+              <img src="prod-10_SUDARSHAN.png" alt="SUDARSHAN QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-10" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-10</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-10_SUDARSHAN.png" download="prod-10_SUDARSHAN.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="protector" data-id="prod-11" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-11</div>
+            <div class="product-name">PROTECTOR</div>
+            <div class="qr-frame">
+              <img src="prod-11_PROTECTOR.png" alt="PROTECTOR QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-11" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-11</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-11_PROTECTOR.png" download="prod-11_PROTECTOR.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="lakshay" data-id="prod-12" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-12</div>
+            <div class="product-name">LAKSHAY</div>
+            <div class="qr-frame">
+              <img src="prod-12_LAKSHAY.png" alt="LAKSHAY QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-12" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-12</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-12_LAKSHAY.png" download="prod-12_LAKSHAY.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="lakshay 25" data-id="prod-13" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-13</div>
+            <div class="product-name">LAKSHAY 25</div>
+            <div class="qr-frame">
+              <img src="prod-13_LAKSHAY-25.png" alt="LAKSHAY 25 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-13" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-13</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-13_LAKSHAY-25.png" download="prod-13_LAKSHAY-25.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="jad shakti" data-id="prod-14" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-14</div>
+            <div class="product-name">JAD SHAKTI</div>
+            <div class="qr-frame">
+              <img src="prod-14_JAD-SHAKTI.png" alt="JAD SHAKTI QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-14" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-14</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-14_JAD-SHAKTI.png" download="prod-14_JAD-SHAKTI.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="thayo 25" data-id="prod-15" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-15</div>
+            <div class="product-name">THAYO 25</div>
+            <div class="qr-frame">
+              <img src="prod-15_THAYO-25.png" alt="THAYO 25 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-15" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-15</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-15_THAYO-25.png" download="prod-15_THAYO-25.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har 30" data-id="prod-16" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-16</div>
+            <div class="product-name">HARI HAR 30</div>
+            <div class="qr-frame">
+              <img src="prod-16_HARI-HAR-30.png" alt="HARI HAR 30 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-16" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-16</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-16_HARI-HAR-30.png" download="prod-16_HARI-HAR-30.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har 75" data-id="prod-17" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-17</div>
+            <div class="product-name">HARI HAR 75</div>
+            <div class="qr-frame">
+              <img src="prod-17_HARI-HAR-75.png" alt="HARI HAR 75 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-17" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-17</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-17_HARI-HAR-75.png" download="prod-17_HARI-HAR-75.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari rakshak" data-id="prod-18" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-18</div>
+            <div class="product-name">HARI RAKSHAK</div>
+            <div class="qr-frame">
+              <img src="prod-18_HARI-RAKSHAK.png" alt="HARI RAKSHAK QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-18" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-18</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-18_HARI-RAKSHAK.png" download="prod-18_HARI-RAKSHAK.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fangonil" data-id="prod-19" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-19</div>
+            <div class="product-name">FANGONIL</div>
+            <div class="qr-frame">
+              <img src="prod-19_FANGONIL.png" alt="FANGONIL QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-19" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-19</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-19_FANGONIL.png" download="prod-19_FANGONIL.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="azoxy 23" data-id="prod-20" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-20</div>
+            <div class="product-name">AZOXY 23</div>
+            <div class="qr-frame">
+              <img src="prod-20_AZOXY-23.png" alt="AZOXY 23 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-20" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-20</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-20_AZOXY-23.png" download="prod-20_AZOXY-23.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="tarpido-6" data-id="prod-21" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-21</div>
+            <div class="product-name">TARPIDO-6</div>
+            <div class="qr-frame">
+              <img src="prod-21_TARPIDO-6.png" alt="TARPIDO-6 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-21" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-21</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-21_TARPIDO-6.png" download="prod-21_TARPIDO-6.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="tarpido" data-id="prod-22" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-22</div>
+            <div class="product-name">TARPIDO</div>
+            <div class="qr-frame">
+              <img src="prod-22_TARPIDO.png" alt="TARPIDO QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-22" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-22</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-22_TARPIDO.png" download="prod-22_TARPIDO.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="tarpido-5" data-id="prod-23" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-23</div>
+            <div class="product-name">TARPIDO-5</div>
+            <div class="qr-frame">
+              <img src="prod-23_TARPIDO-5.png" alt="TARPIDO-5 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-23" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-23</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-23_TARPIDO-5.png" download="prod-23_TARPIDO-5.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="rider" data-id="prod-24" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-24</div>
+            <div class="product-name">RIDER</div>
+            <div class="qr-frame">
+              <img src="prod-24_RIDER.png" alt="RIDER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-24" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-24</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-24_RIDER.png" download="prod-24_RIDER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="one touch" data-id="prod-25" data-cat="biostimulants">
+          <div>
+            <span class="category-tag">Biostimulants</span>
+            <div class="product-id">prod-25</div>
+            <div class="product-name">ONE TOUCH</div>
+            <div class="qr-frame">
+              <img src="prod-25_ONE-TOUCH.png" alt="ONE TOUCH QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-25" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-25</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-25_ONE-TOUCH.png" download="prod-25_ONE-TOUCH.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="dharti ratn" data-id="prod-26" data-cat="biostimulants">
+          <div>
+            <span class="category-tag">Biostimulants</span>
+            <div class="product-id">prod-26</div>
+            <div class="product-name">DHARTI RATN</div>
+            <div class="qr-frame">
+              <img src="prod-26_DHARTI-RATN.png" alt="DHARTI RATN QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-26" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-26</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-26_DHARTI-RATN.png" download="prod-26_DHARTI-RATN.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="m2" data-id="prod-27" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-27</div>
+            <div class="product-name">M2</div>
+            <div class="qr-frame">
+              <img src="prod-27_M2.png" alt="M2 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-27" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-27</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-27_M2.png" download="prod-27_M2.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="agro fast" data-id="prod-28" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-28</div>
+            <div class="product-name">AGRO FAST</div>
+            <div class="qr-frame">
+              <img src="prod-28_AGRO-FAST.png" alt="AGRO FAST QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-28" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-28</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-28_AGRO-FAST.png" download="prod-28_AGRO-FAST.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="green gaurd" data-id="prod-29" data-cat="biostimulants">
+          <div>
+            <span class="category-tag">Biostimulants</span>
+            <div class="product-id">prod-29</div>
+            <div class="product-name">GREEN GAURD</div>
+            <div class="qr-frame">
+              <img src="prod-29_GREEN-GAURD.png" alt="GREEN GAURD QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-29" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-29</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-29_GREEN-GAURD.png" download="prod-29_GREEN-GAURD.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="urja+" data-id="prod-30" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-30</div>
+            <div class="product-name">URJA+</div>
+            <div class="qr-frame">
+              <img src="prod-30_URJA.png" alt="URJA+ QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-30" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-30</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-30_URJA.png" download="prod-30_URJA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="k shield" data-id="prod-31" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-31</div>
+            <div class="product-name">K SHIELD</div>
+            <div class="qr-frame">
+              <img src="prod-31_K-SHIELD.png" alt="K SHIELD QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-31" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-31</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-31_K-SHIELD.png" download="prod-31_K-SHIELD.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="flower gold" data-id="prod-32" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-32</div>
+            <div class="product-name">FLOWER GOLD</div>
+            <div class="qr-frame">
+              <img src="prod-32_FLOWER-GOLD.png" alt="FLOWER GOLD QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-32" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-32</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-32_FLOWER-GOLD.png" download="prod-32_FLOWER-GOLD.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="bumper gold" data-id="prod-33" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-33</div>
+            <div class="product-name">BUMPER GOLD</div>
+            <div class="qr-frame">
+              <img src="prod-33_BUMPER-GOLD.png" alt="BUMPER GOLD QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-33" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-33</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-33_BUMPER-GOLD.png" download="prod-33_BUMPER-GOLD.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="kawach" data-id="prod-34" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-34</div>
+            <div class="product-name">KAWACH</div>
+            <div class="qr-frame">
+              <img src="prod-34_KAWACH.png" alt="KAWACH QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-34" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-34</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-34_KAWACH.png" download="prod-34_KAWACH.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="axeon 75" data-id="prod-35" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-35</div>
+            <div class="product-name">AXEON 75</div>
+            <div class="qr-frame">
+              <img src="prod-35_AXEON-75.png" alt="AXEON 75 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-35" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-35</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-35_AXEON-75.png" download="prod-35_AXEON-75.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hexa 75" data-id="prod-36" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-36</div>
+            <div class="product-name">HEXA 75</div>
+            <div class="qr-frame">
+              <img src="prod-36_HEXA-75.png" alt="HEXA 75 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-36" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-36</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-36_HEXA-75.png" download="prod-36_HEXA-75.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hexa 5" data-id="prod-37" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-37</div>
+            <div class="product-name">HEXA 5</div>
+            <div class="qr-frame">
+              <img src="prod-37_HEXA-5.png" alt="HEXA 5 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-37" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-37</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-37_HEXA-5.png" download="prod-37_HEXA-5.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="shadow" data-id="prod-38" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-38</div>
+            <div class="product-name">SHADOW</div>
+            <div class="qr-frame">
+              <img src="prod-38_SHADOW.png" alt="SHADOW QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-38" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-38</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-38_SHADOW.png" download="prod-38_SHADOW.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari har-40" data-id="prod-39" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-39</div>
+            <div class="product-name">HARI HAR-40</div>
+            <div class="qr-frame">
+              <img src="prod-39_HARI-HAR-40.png" alt="HARI HAR-40 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-39" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-39</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-39_HARI-HAR-40.png" download="prod-39_HARI-HAR-40.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fipro gold" data-id="prod-40" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-40</div>
+            <div class="product-name">FIPRO GOLD</div>
+            <div class="qr-frame">
+              <img src="prod-40_FIPRO-GOLD.png" alt="FIPRO GOLD QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-40" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-40</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-40_FIPRO-GOLD.png" download="prod-40_FIPRO-GOLD.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="divya" data-id="prod-41" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-41</div>
+            <div class="product-name">DIVYA</div>
+            <div class="qr-frame">
+              <img src="prod-41_DIVYA.png" alt="DIVYA QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-41" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-41</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-41_DIVYA.png" download="prod-41_DIVYA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="captain" data-id="prod-42" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-42</div>
+            <div class="product-name">CAPTAIN</div>
+            <div class="qr-frame">
+              <img src="prod-42_CAPTAIN.png" alt="CAPTAIN QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-42" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-42</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-42_CAPTAIN.png" download="prod-42_CAPTAIN.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="thunder" data-id="prod-43" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-43</div>
+            <div class="product-name">THUNDER</div>
+            <div class="qr-frame">
+              <img src="prod-43_THUNDER.png" alt="THUNDER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-43" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-43</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-43_THUNDER.png" download="prod-43_THUNDER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="delta dhamaka" data-id="prod-44" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-44</div>
+            <div class="product-name">DELTA DHAMAKA</div>
+            <div class="qr-frame">
+              <img src="prod-44_DELTA-DHAMAKA.png" alt="DELTA DHAMAKA QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-44" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-44</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-44_DELTA-DHAMAKA.png" download="prod-44_DELTA-DHAMAKA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="delta power" data-id="prod-45" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-45</div>
+            <div class="product-name">DELTA POWER</div>
+            <div class="qr-frame">
+              <img src="prod-45_DELTA-POWER.png" alt="DELTA POWER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-45" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-45</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-45_DELTA-POWER.png" download="prod-45_DELTA-POWER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="delta super" data-id="prod-46" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-46</div>
+            <div class="product-name">DELTA SUPER</div>
+            <div class="qr-frame">
+              <img src="prod-46_DELTA-SUPER.png" alt="DELTA SUPER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-46" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-46</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-46_DELTA-SUPER.png" download="prod-46_DELTA-SUPER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="delta+" data-id="prod-47" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-47</div>
+            <div class="product-name">DELTA+</div>
+            <div class="qr-frame">
+              <img src="prod-47_DELTA.png" alt="DELTA+ QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-47" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-47</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-47_DELTA.png" download="prod-47_DELTA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="atack-58" data-id="prod-48" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-48</div>
+            <div class="product-name">ATACK-58</div>
+            <div class="qr-frame">
+              <img src="prod-48_ATACK-58.png" alt="ATACK-58 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-48" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-48</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-48_ATACK-58.png" download="prod-48_ATACK-58.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="war-70" data-id="prod-49" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-49</div>
+            <div class="product-name">WAR-70</div>
+            <div class="qr-frame">
+              <img src="prod-49_WAR-70.png" alt="WAR-70 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-49" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-49</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-49_WAR-70.png" download="prod-49_WAR-70.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="eliminator" data-id="prod-50" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-50</div>
+            <div class="product-name">ELIMINATOR</div>
+            <div class="qr-frame">
+              <img src="prod-50_ELIMINATOR.png" alt="ELIMINATOR QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-50" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-50</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-50_ELIMINATOR.png" download="prod-50_ELIMINATOR.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="eliminator-64" data-id="prod-51" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-51</div>
+            <div class="product-name">ELIMINATOR-64</div>
+            <div class="qr-frame">
+              <img src="prod-51_ELIMINATOR-64.png" alt="ELIMINATOR-64 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-51" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-51</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-51_ELIMINATOR-64.png" download="prod-51_ELIMINATOR-64.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="eliminator-305" data-id="prod-52" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-52</div>
+            <div class="product-name">ELIMINATOR-305</div>
+            <div class="qr-frame">
+              <img src="prod-52_ELIMINATOR-305.png" alt="ELIMINATOR-305 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-52" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-52</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-52_ELIMINATOR-305.png" download="prod-52_ELIMINATOR-305.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hariphate 75" data-id="prod-53" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-53</div>
+            <div class="product-name">HARIPHATE 75</div>
+            <div class="qr-frame">
+              <img src="prod-53_HARIPHATE-75.png" alt="HARIPHATE 75 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-53" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-53</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-53_HARIPHATE-75.png" download="prod-53_HARIPHATE-75.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hariphate 508" data-id="prod-54" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-54</div>
+            <div class="product-name">HARIPHATE 508</div>
+            <div class="qr-frame">
+              <img src="prod-54_HARIPHATE-508.png" alt="HARIPHATE 508 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-54" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-54</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-54_HARIPHATE-508.png" download="prod-54_HARIPHATE-508.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hariphate 95" data-id="prod-55" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-55</div>
+            <div class="product-name">HARIPHATE 95</div>
+            <div class="qr-frame">
+              <img src="prod-55_HARIPHATE-95.png" alt="HARIPHATE 95 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-55" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-55</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-55_HARIPHATE-95.png" download="prod-55_HARIPHATE-95.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="atal" data-id="prod-56" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-56</div>
+            <div class="product-name">ATAL</div>
+            <div class="qr-frame">
+              <img src="prod-56_ATAL.png" alt="ATAL QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-56" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-56</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-56_ATAL.png" download="prod-56_ATAL.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari pendi" data-id="prod-57" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-57</div>
+            <div class="product-name">HARI PENDI</div>
+            <div class="qr-frame">
+              <img src="prod-57_HARI-PENDI.png" alt="HARI PENDI QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-57" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-57</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-57_HARI-PENDI.png" download="prod-57_HARI-PENDI.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="hari pendi - 38" data-id="prod-58" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-58</div>
+            <div class="product-name">HARI PENDI - 38</div>
+            <div class="qr-frame">
+              <img src="prod-58_HARI-PENDI-38.png" alt="HARI PENDI - 38 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-58" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-58</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-58_HARI-PENDI-38.png" download="prod-58_HARI-PENDI-38.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="safaya" data-id="prod-59" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-59</div>
+            <div class="product-name">SAFAYA</div>
+            <div class="qr-frame">
+              <img src="prod-59_SAFAYA.png" alt="SAFAYA QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-59" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-59</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-59_SAFAYA.png" download="prod-59_SAFAYA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="harihar neem 300" data-id="prod-60" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-60</div>
+            <div class="product-name">HARIHAR NEEM 300</div>
+            <div class="qr-frame">
+              <img src="prod-60_HARIHAR-NEEM-300.png" alt="HARIHAR NEEM 300 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-60" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-60</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-60_HARIHAR-NEEM-300.png" download="prod-60_HARIHAR-NEEM-300.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="harihar neem 3000" data-id="prod-61" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-61</div>
+            <div class="product-name">HARIHAR NEEM 3000</div>
+            <div class="qr-frame">
+              <img src="prod-61_HARIHAR-NEEM-3000.png" alt="HARIHAR NEEM 3000 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-61" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-61</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-61_HARIHAR-NEEM-3000.png" download="prod-61_HARIHAR-NEEM-3000.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="harihar neem 1500" data-id="prod-62" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-62</div>
+            <div class="product-name">HARIHAR NEEM 1500</div>
+            <div class="qr-frame">
+              <img src="prod-62_HARIHAR-NEEM-1500.png" alt="HARIHAR NEEM 1500 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-62" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-62</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-62_HARIHAR-NEEM-1500.png" download="prod-62_HARIHAR-NEEM-1500.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="jwala-41" data-id="prod-63" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-63</div>
+            <div class="product-name">JWALA-41</div>
+            <div class="qr-frame">
+              <img src="prod-63_JWALA-41.png" alt="JWALA-41 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-63" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-63</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-63_JWALA-41.png" download="prod-63_JWALA-41.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="jwala-71" data-id="prod-64" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-64</div>
+            <div class="product-name">JWALA-71</div>
+            <div class="qr-frame">
+              <img src="prod-64_JWALA-71.png" alt="JWALA-71 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-64" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-64</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-64_JWALA-71.png" download="prod-64_JWALA-71.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="achook" data-id="prod-65" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-65</div>
+            <div class="product-name">ACHOOK</div>
+            <div class="qr-frame">
+              <img src="prod-65_ACHOOK.png" alt="ACHOOK QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-65" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-65</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-65_ACHOOK.png" download="prod-65_ACHOOK.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="pralay" data-id="prod-66" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-66</div>
+            <div class="product-name">PRALAY</div>
+            <div class="qr-frame">
+              <img src="prod-66_PRALAY.png" alt="PRALAY QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-66" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-66</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-66_PRALAY.png" download="prod-66_PRALAY.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="sulfocare" data-id="prod-67" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-67</div>
+            <div class="product-name">SULFOCARE</div>
+            <div class="qr-frame">
+              <img src="prod-67_SULFOCARE.png" alt="SULFOCARE QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-67" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-67</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-67_SULFOCARE.png" download="prod-67_SULFOCARE.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="pure sulfo" data-id="prod-68" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-68</div>
+            <div class="product-name">PURE SULFO</div>
+            <div class="qr-frame">
+              <img src="prod-68_PURE-SULFO.png" alt="PURE SULFO QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-68" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-68</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-68_PURE-SULFO.png" download="prod-68_PURE-SULFO.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="probenz-50" data-id="prod-69" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-69</div>
+            <div class="product-name">PROBENZ-50</div>
+            <div class="qr-frame">
+              <img src="prod-69_PROBENZ-50.png" alt="PROBENZ-50 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-69" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-69</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-69_PROBENZ-50.png" download="prod-69_PROBENZ-50.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="npk 19:19:19" data-id="prod-70" data-cat="soluble fertilizers">
+          <div>
+            <span class="category-tag">Soluble Fertilizers</span>
+            <div class="product-id">prod-70</div>
+            <div class="product-name">NPK 19:19:19</div>
+            <div class="qr-frame">
+              <img src="prod-70_NPK-19-19-19.png" alt="NPK 19:19:19 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-70" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-70</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-70_NPK-19-19-19.png" download="prod-70_NPK-19-19-19.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="npk 00:52:34" data-id="prod-71" data-cat="soluble fertilizers">
+          <div>
+            <span class="category-tag">Soluble Fertilizers</span>
+            <div class="product-id">prod-71</div>
+            <div class="product-name">NPK 00:52:34</div>
+            <div class="qr-frame">
+              <img src="prod-71_NPK-00-52-34.png" alt="NPK 00:52:34 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-71" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-71</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-71_NPK-00-52-34.png" download="prod-71_NPK-00-52-34.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="npk 00:00:50" data-id="prod-72" data-cat="soluble fertilizers">
+          <div>
+            <span class="category-tag">Soluble Fertilizers</span>
+            <div class="product-id">prod-72</div>
+            <div class="product-name">NPK 00:00:50</div>
+            <div class="qr-frame">
+              <img src="prod-72_NPK-00-00-50.png" alt="NPK 00:00:50 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-72" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-72</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-72_NPK-00-00-50.png" download="prod-72_NPK-00-00-50.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fungi rukshak" data-id="prod-73" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-73</div>
+            <div class="product-name">FUNGI RUKSHAK</div>
+            <div class="qr-frame">
+              <img src="prod-73_FUNGI-RUKSHAK.png" alt="FUNGI RUKSHAK QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-73" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-73</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-73_FUNGI-RUKSHAK.png" download="prod-73_FUNGI-RUKSHAK.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="suraksha+" data-id="prod-74" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-74</div>
+            <div class="product-name">SURAKSHA+</div>
+            <div class="qr-frame">
+              <img src="prod-74_SURAKSHA.png" alt="SURAKSHA+ QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-74" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-74</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-74_SURAKSHA.png" download="prod-74_SURAKSHA.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="baaz" data-id="prod-75" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-75</div>
+            <div class="product-name">BAAZ</div>
+            <div class="qr-frame">
+              <img src="prod-75_BAAZ.png" alt="BAAZ QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-75" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-75</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-75_BAAZ.png" download="prod-75_BAAZ.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="baaz-2" data-id="prod-76" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-76</div>
+            <div class="product-name">BAAZ-2</div>
+            <div class="qr-frame">
+              <img src="prod-76_BAAZ-2.png" alt="BAAZ-2 QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-76" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-76</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-76_BAAZ-2.png" download="prod-76_BAAZ-2.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="expert" data-id="prod-77" data-cat="pesticides">
+          <div>
+            <span class="category-tag">Pesticides</span>
+            <div class="product-id">prod-77</div>
+            <div class="product-name">EXPERT</div>
+            <div class="qr-frame">
+              <img src="prod-77_EXPERT.png" alt="EXPERT QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-77" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-77</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-77_EXPERT.png" download="prod-77_EXPERT.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="agro shakti" data-id="prod-78" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-78</div>
+            <div class="product-name">AGRO SHAKTI</div>
+            <div class="qr-frame">
+              <img src="prod-78_AGRO-SHAKTI.png" alt="AGRO SHAKTI QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-78" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-78</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-78_AGRO-SHAKTI.png" download="prod-78_AGRO-SHAKTI.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="agro power" data-id="prod-79" data-cat="growth regulators">
+          <div>
+            <span class="category-tag">Growth Regulators</span>
+            <div class="product-id">prod-79</div>
+            <div class="product-name">AGRO POWER</div>
+            <div class="qr-frame">
+              <img src="prod-79_AGRO-POWER.png" alt="AGRO POWER QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-79" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-79</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-79_AGRO-POWER.png" download="prod-79_AGRO-POWER.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fungi fort" data-id="prod-80" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-80</div>
+            <div class="product-name">FUNGI FORT</div>
+            <div class="qr-frame">
+              <img src="prod-80_FUNGI-FORT.png" alt="FUNGI FORT QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-80" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-80</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-80_FUNGI-FORT.png" download="prod-80_FUNGI-FORT.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fungi band" data-id="prod-81" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-81</div>
+            <div class="product-name">FUNGI BAND</div>
+            <div class="qr-frame">
+              <img src="prod-81_FUNGI-BAND.png" alt="FUNGI BAND QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-81" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-81</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-81_FUNGI-BAND.png" download="prod-81_FUNGI-BAND.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="fungi strick" data-id="prod-82" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-82</div>
+            <div class="product-name">FUNGI STRICK</div>
+            <div class="qr-frame">
+              <img src="prod-82_FUNGI-STRICK.png" alt="FUNGI STRICK QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-82" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-82</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-82_FUNGI-STRICK.png" download="prod-82_FUNGI-STRICK.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+        <div class="card" data-name="dr. fungus" data-id="prod-83" data-cat="fungicides">
+          <div>
+            <span class="category-tag">Fungicides</span>
+            <div class="product-id">prod-83</div>
+            <div class="product-name">DR. FUNGUS</div>
+            <div class="qr-frame">
+              <img src="prod-83_DR-FUNGUS.png" alt="DR. FUNGUS QR Code" loading="lazy">
+            </div>
+            <a href="https://hariharcropscience.in/products/prod-83" target="_blank" class="scan-url">https://hariharcropscience.in/products/prod-83</a>
+          </div>
+          <div class="card-actions">
+            <a href="prod-83_DR-FUNGUS.png" download="prod-83_DR-FUNGUS.png" class="btn-download">⬇️ Download High-Res PNG</a>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <script>
+    function filterCards() {
+      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+      const cards = document.querySelectorAll(".card");
+      let visible = 0;
+      cards.forEach(card => {
+        const name = card.getAttribute("data-name");
+        const id = card.getAttribute("data-id");
+        const cat = card.getAttribute("data-cat");
+        if (name.includes(query) || id.includes(query) || cat.includes(query)) {
+          card.style.display = "flex";
+          visible++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+      document.getElementById("countBadge").innerText = visible + " Products";
+    }
+  </script>
+</body>
+</html>

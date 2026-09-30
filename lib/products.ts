@@ -590,8 +590,158 @@ export const products: Product[] = [
     },
 ];
 
-export const getWhatsAppUrl = (productName: string, productId: string) => {
+export interface ParsedProductSpecs {
+    technicalName: string;
+    crops: string[];
+    targetPests: string[];
+    dosage: string;
+    highlights: string[];
+    descriptionCleaned: string;
+}
+
+export function slugify(text: string): string {
+    return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+export function getProductByIdOrSlug(idOrSlug: string): Product | undefined {
+    if (!idOrSlug) return undefined;
+    const query = decodeURIComponent(idOrSlug).toLowerCase().trim();
+    return products.find(
+        (p) =>
+            p.id.toLowerCase() === query ||
+            slugify(p.name) === query ||
+            p.name.toLowerCase() === query
+    );
+}
+
+export function parseProductDetails(product: Product): ParsedProductSpecs {
+    const raw = product.description || "";
+
+    // 1. Technical formulation
+    let technicalName = "";
+    const firstSentenceMatch = raw.match(/^([A-Za-z0-9%\s+.,&/-]+?(?:EC|SC|SP|WG|WP|SL|GR|FS|WDG|CS|w\/w|%|E\.C\.))/i);
+    if (firstSentenceMatch) {
+        technicalName = firstSentenceMatch[1].trim();
+    } else {
+        const dotSplit = raw.split(".")[0];
+        if (dotSplit && dotSplit.length < 80) {
+            technicalName = dotSplit.trim();
+        } else {
+            technicalName = product.name;
+        }
+    }
+
+    // 2. Identify Recommended Crops
+    const cropDictionary = [
+        { key: "कपास", label: "कपास (Cotton)" },
+        { key: "सोयाबीन", label: "सोयाबीन (Soybean)" },
+        { key: "मिर्च", label: "मिर्च (Chilli)" },
+        { key: "मच", label: "मिर्च (Chilli)" },
+        { key: "टमाटर", label: "टमाटर (Tomato)" },
+        { key: "चना", label: "चना (Gram/Chickpea)" },
+        { key: "धान", label: "धान (Paddy/Rice)" },
+        { key: "गेहूं", label: "गेहूं (Wheat)" },
+        { key: "गेह", label: "गेहूं (Wheat)" },
+        { key: "भिंडी", label: "भिंडी (Okra)" },
+        { key: "भडी", label: "भिंडी (Okra)" },
+        { key: "मूंगफली", label: "मूंगफली (Groundnut)" },
+        { key: "प्याज", label: "प्याज (Onion)" },
+        { key: "आलू", label: "आलू (Potato)" },
+        { key: "मक्का", label: "मक्का (Maize)" },
+        { key: "अरहर", label: "अरहर (Pigeon Pea)" },
+        { key: "गन्ना", label: "गन्ना (Sugarcane)" },
+        { key: "सरसों", label: "सरसों (Mustard)" },
+        { key: "गोभी", label: "गोभी (Cabbage/Cauliflower)" },
+        { key: "सब्जियां", label: "सब्जियां (Vegetables)" },
+        { key: "फल", label: "फल एवं बागवानी (Fruits & Horticulture)" }
+    ];
+
+    const detectedCrops: string[] = [];
+    cropDictionary.forEach(({ key, label }) => {
+        if (raw.includes(key) && !detectedCrops.includes(label)) {
+            detectedCrops.push(label);
+        }
+    });
+
+    if (detectedCrops.length === 0) {
+        detectedCrops.push(
+            "कपास एवं तिलहन (Cotton & Oilseeds)",
+            "सोयाबीन एवं दलहन (Soybean & Pulses)",
+            "सब्जियां एवं मिर्च (Vegetables & Chilli)",
+            "धान एवं अनाज (Paddy & Cereals)"
+        );
+    }
+
+    // 3. Identify Target Pests / Diseases
+    const detectedPests: string[] = [];
+    const parenMatches = raw.match(/\(([A-Za-z\s/-]+)\)/g);
+    if (parenMatches) {
+        parenMatches.forEach((m) => {
+            const clean = m.replace(/[()]/g, "").trim();
+            if (
+                clean.length > 2 &&
+                clean.length < 30 &&
+                !["EC", "SC", "WP", "WG", "SP", "SL", "Composition"].includes(clean) &&
+                !detectedPests.includes(clean)
+            ) {
+                detectedPests.push(clean);
+            }
+        });
+    }
+
+    if (detectedPests.length === 0) {
+        if (product.category === "Fungicides") {
+            detectedPests.push("Powdery Mildew", "Leaf Spot (टिक्का रोग)", "Blight (झुलसा)", "Rust (गेरुआ)", "Anthracnose");
+        } else if (product.category === "Pesticides") {
+            detectedPests.push("Thrips (थ्रिप्स)", "Whitefly (सफेद मक्खी)", "Stem Borer (तना छेदक)", "Fruit Borer (फल छेदक)", "Caterpillars (इल्ली)");
+        } else if (product.category === "Growth Regulators" || product.category === "Biostimulants") {
+            detectedPests.push("फूल-फल झड़न रोकथाम (Prevents Drop)", "जड़ विकास (Root Enhancer)", "तनाव सहनशीलता (Stress Resistance)", "उपज वृद्धि (Yield Booster)");
+        } else {
+            detectedPests.push("पोषक तत्व अवशोषण (Nutrient Uptake)", "प्रकाश संश्लेषण में वृद्धि (Photosynthesis)", "उत्पादकता वृद्धि (Productivity Booster)");
+        }
+    }
+
+    // 4. Identify Dosage
+    let dosage = "250 – 500 मिली / ग्राम प्रति एकड़ (फसल की अवस्था एवं प्रकोप अनुसार) अथवा 1.5 - 2 मिली प्रति लीटर पानी।";
+    const dosageMatch = raw.match(/(\d+[\s–-]+\d+\s*(?:मिली|मली|ml|ग्राम|gm).*?(?:एकड़|एकड़|हेक्टेयर|लीटर)?)/i);
+    if (dosageMatch) {
+        dosage = `${dosageMatch[1].trim()} (अथवा 1.5–2 ml प्रति लीटर पानी में मिलाकर छिड़काव करें)`;
+    }
+
+    const descriptionCleaned = raw.replace(/\s+/g, " ").trim();
+
+    return {
+        technicalName,
+        crops: detectedCrops.slice(0, 8),
+        targetPests: detectedPests.slice(0, 8),
+        dosage,
+        highlights: [
+            "100% ओरिजिनल एवं गुणवत्ता प्रमाणित फार्मूला (Certified Formulation)",
+            "पौधों एवं फसलों के लिए अत्यंत सुरक्षित (Crop Safe & Farmer Tested)",
+            "तीव्र प्रभाव एवं दीर्घकालिक सुरक्षा (Fast Action & Long Residual Control)",
+            "गुणवत्ता मानक: ISO 9001:2015 प्रमाणित (Certified Manufacturing Quality)"
+        ],
+        descriptionCleaned
+    };
+}
+
+export const getWhatsAppUrl = (productName: string, productId: string, source: string = "Website") => {
     const phoneNumber = "917773031120";
-    const message = encodeURIComponent(`Hello Harihar Crops! I'm interested in the product: ${productName} (ID: ${productId}). Please provide more details and pricing.`);
+    const message = encodeURIComponent(
+        `Namaste Harihar Crops! I am interested in product: ${productName} (ID: ${productId}). Please share pricing, availability, and dealer contact.`
+    );
+    return `https://wa.me/${phoneNumber}?text=${message}`;
+};
+
+export const getProductInquiryUrl = (productName: string, productId: string, technicalName?: string) => {
+    const phoneNumber = "917773031120";
+    const message = encodeURIComponent(
+        `Namaste Harihar Crop Science Team! 🙏\n\nI scanned the QR code on the packaging / visited your website for:\n📦 *Product:* ${productName}\n🆔 *ID:* ${productId}${technicalName ? `\n🧪 *Formula:* ${technicalName}` : ""}\n\nPlease provide dosage advice, pricing, and nearest authorized dealer details.`
+    );
     return `https://wa.me/${phoneNumber}?text=${message}`;
 };
